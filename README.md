@@ -2,7 +2,7 @@
 
 # VS Code for Data & AI Projects
 
-### A Comprehensive Setup Guide (Conda Only)
+### A Comprehensive Setup Guide
 
 ---
 
