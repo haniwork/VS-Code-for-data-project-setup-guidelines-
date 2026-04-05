@@ -34,3 +34,71 @@ You can create a new environment or use an existing one. To create a new one:
 ```bash
 conda create -n venv_name_example python=3.11 -y
 conda activate venv_name_example
+```
+
+### 2. Connect to VS Code
+1. Open the **Command Palette** (`Ctrl + Shift + P` / `Cmd + Shift + P`).
+2. Type and select: **Python: Select Interpreter**.
+3. Choose `venv_name_example` from the list. If you are using an existing environment not listed, select **Enter interpreter path...** and point to the Python executable.
+
+---
+
+## 📦 Essential Extensions
+Install these via the Extensions view (`Ctrl + Shift + X`):
+
+* **Python & Jupyter:** The core engine for running scripts and notebooks.
+* **GitHub Copilot:** AI-powered pair programming.
+* **Ruff:** An extremely fast linter and formatter.
+* **GitLens:** See who changed what line and when (blame annotations).
+
+---
+
+## ⚡ Interactive Python (The Best of Both Worlds)
+You don't need a `.ipynb` file to run code iteratively.
+
+1. In any `.py` file, **highlight** a block of code.
+2. Press `Shift + Enter`.
+3. VS Code opens an **Interactive Window** on the side. You get the benefit of a notebook (visualizing dataframes and plots) while keeping your code in a clean, versionable script.
+
+---
+
+## 🌿 Version Control: Working with Git in VS Code
+VS Code provides a visual **Source Control** tab (`Ctrl + Shift + G`) that simplifies the Git lifecycle.
+
+### 1. The Workflow: Stage, Commit, Push
+* **Staging:** Click the **+** icon next to a file to prepare it for a snapshot.
+* **Committing:** Type a descriptive message (e.g., `feat: add data cleaning module`) and click **Commit**.
+* **Pushing:** Click **Sync Changes** to upload your work to GitHub.
+
+### 2. Visualizing Diffs
+Before committing, click a file in the Source Control side-bar. VS Code opens a **Side-by-Side Diff**. This is your final sanity check to ensure you aren't committing temporary "test" code or sensitive API keys.
+
+---
+
+## 🎨 UI, Styling & Auto-Formatting
+
+### Theme & Icons
+* **Color Theme:** Atom One Dark or Dracula.
+* **File Icons:** Material Icon Theme.
+
+### Auto-Formatting (The "No-Effort" Way)
+Stop worrying about code style. Let **Ruff** handle it every time you save. Add this to your `settings.json` (Open with `Ctrl + ,` and click the "Open Settings JSON" icon):
+
+```json
+{
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "always",
+      "source.organizeImports.ruff": "always"
+    }
+  },
+  "material-icon-theme.folders.associations": {
+    "env": "environment",
+    "references": "docs",
+    "modeling": "generator",
+    "data": "folder-database",
+    "notebooks": "folder-jupyter"
+  }
+}
