@@ -43,6 +43,58 @@ conda activate venv_name_example
 
 ---
 
+## 🛠️ Managing Libraries & Dependencies
+
+Once your environment is active, you need to install the tools required for data analysis and AI development.
+
+### 1. Essential Core Libraries
+Before running notebooks, you must install the Jupyter kernel and basic data stacks within your environment:
+```bash
+pip install jupyter ipykernel pandas numpy matplotlib
+```
+
+---
+
+## 2. Installing via pip
+
+To install a specific library (e.g., Scikit-Learn or PyTorch), use the `pip install` command:
+```
+pip install scikit-learn
+```
+
+---
+
+## 3. Bulk Installation using requirements.txt
+
+In professional projects, dependencies are usually listed in a `requirements.txt` file. This ensures everyone on your team uses the exact same versions.
+
+To install everything listed in a project's requirement file, run:
+
+Bash
+```
+pip install -r requirements.txt
+Pro Tip: To create your own requirements file based on what's currently installed in your environment, use:
+pip freeze > requirements.txt
+```
+---
+
+## 4. Verifying Your Installation
+
+To see a list of all libraries currently installed in your active environment:
+
+Bash
+```
+pip list
+```
+
+### Where to place this in your full document:
+I recommend inserting this block **between** "Python & Environment Setup" and "Essential Extensions". This creates a logical flow: 
+1. Create Env 
+2. **Install Libraries (This section)** 3. Setup Editor Extensions 
+4. Start Coding.
+
+---
+
 ## 📦 Essential Extensions
 Install these via the Extensions view (`Ctrl + Shift + X`):
 
